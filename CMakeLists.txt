@@ -3,7 +3,7 @@ project(Between_Plus_and_Minus)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Between
+add_executable(between
         src/main.cpp
         src/core/GameState.cpp
         src/core/Rules.cpp
