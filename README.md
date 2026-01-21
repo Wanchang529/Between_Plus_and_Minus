@@ -54,10 +54,34 @@ After 9 rounds:
 between-plus-minus/
 ├── CMakeLists.txt
 ├── README.md
-├── src/
-│   ├── core/        # Game rules, state, resolver
-│   ├── agents/      # Human and AI agents
-│   └── cli/         # Command-line interface
+├── data                        # (reserved)
+└── src/
+    ├── main.cpp
+    ├── agents/                 # Agent interface + implementations
+    │   ├── IAgent.h
+    │   ├── RandomAgent.h
+    │   └── RandomAgent.cpp
+    ├── core/                   # Core game model + rules + resolution
+    │   ├── Actions.h
+    │   ├── Types.h
+    │   ├── GameState.h
+    │   ├── GameState.cpp
+    │   ├── Rules.h
+    │   ├── Rules.cpp
+    │   ├── Resolver.h
+    │   ├── Resolver.cpp
+    │   └── cli/                # CLI helpers + argument parsing
+    │       ├── CliArgs.h
+    │       ├── CliArgs.cpp
+    │       ├── Clihelpers.h
+    │       └── Clihelpers.cpp
+    ├── sim/                    # Simulation runners / modes
+    │   ├── modes.h
+    │   ├── modes.cpp
+    │   ├── RunGame.h
+    │   └── RunGame.cpp
+    ├── io/                     # (reserved) logging / replay / file I/O
+    └── ui/                     # (reserved) future UI frontends
 
 ```
 
